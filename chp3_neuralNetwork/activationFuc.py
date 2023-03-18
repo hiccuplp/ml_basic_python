@@ -28,6 +28,12 @@ def sigmoid(x):
     return 1 / (1 + np.exp(x))
 
 
+def relu(x):
+    # relu function
+    # maximum函数会从输入的数值中选择较大的那个值进行输出
+    return np.maximum(0, x)
+
+
 if __name__ == '__main__':
     value = 9
     print(step_function(value))
@@ -42,3 +48,6 @@ if __name__ == '__main__':
     # 使用线性函数，无法发挥多层网络带来的优势。
     result2 = sigmoid(value_2)
     plot_func(value_2, result2)
+
+    result_relu = relu(value_2)
+    plot_func(value_2, result_relu)
