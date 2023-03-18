@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pylab as plt
 
+
 def step_function(x):
     # 阶跃函数
     if x > 0:
@@ -8,10 +9,12 @@ def step_function(x):
     else:
         return 0
 
+
 def step_function_v2(x):
     # 阶跃函数
     y = x > 0  # 不等号运算
     return y.astype(np.int)
+
 
 def plot_func(x, y):
     # 绘图函数
@@ -19,13 +22,13 @@ def plot_func(x, y):
     plt.ylim(np.min(y) - 1, np.max(y) + 1)  # 指定y轴的范围
     plt.show()
 
+
 def sigmoid(x):
     # sigmoid function
     return 1 / (1 + np.exp(x))
 
 
 if __name__ == '__main__':
-
     value = 9
     print(step_function(value))
 
